@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <title>voice</title>
     <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
     <!-- <link href="assets/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous"> -->
@@ -48,7 +48,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline-dark me-5" type="submit">Log in</button>
+                    <button class="btn btn-outline-success me-5" type="submit">Log in</button>
                 </form>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <p>Accurate, fast, and easy voice-to-text conversion for <br>creators,
                         professionals, and everyone in between.</p>
                 </div>
-                <button class="btn btn-outline-dark mt-3" type="start">Get started for free</button>
+                <button class="btn btn-outline-success mt-3" type="start">Get started for free</button>
                 <div>
                     <p class="subtitle mt-4 pt-3 text-wrap">Tired of digging through long call recordings?<br>
                         No more manual note-taking or replaying long recordings.
@@ -83,7 +83,7 @@
                     Check out one of the demos done by PiXimperfect and see how Voice.ai
                     voice changer technology transforms any voice with the power of AI.
                 </p>
-                <button class="btn btn-outline-dark mt-3">
+                <button class="btn btn-outline-success mt-3">
                     → Try for free
                 </button>
             </div>
@@ -99,49 +99,38 @@
             </div>
         </div>
     </div>
-    <div class="container mb-5">
-        <h1 class="text-center mt-5 pt-5 pb-5 fw-bold">Revolutionize Your Calls with AI</h1>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mt-3">Call Transcription Engine</h3>
-                        <p class="card-text pt-2">Turn sales calls into accurate transcripts
-                            Upload or record calls and get precise, speaker-separated text transcripts using our
-                            advanced speech-to-text AI.</p>
-                        <img src="assets/image/web-tools-white.webp" class="card-img-top" alt="...">
-                        <a href="#" class="btn btn-1 mt-3">Try Transcription for Free →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold mt-3">AI-Powered Call Summary</h3>
-                        <p class="card-text pt-2">TInstant call insights at a glance
-                            Our AI analyzes your call transcripts and extracts key insights, action items, and summaries
-                            – perfect for quick reviews and follow-ups.</p>
-                        <img src="assets/image/mobile-app-white.webp" class="card-img-top w-75 " alt="...">
-                        <a href="#" class="btn btn-1 mt-3">Generate Summaries Instantly →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body ">
-                        <h3 class="card-title fw-bold mt-3">Dashboard & Analytics</h3>
-                        <p class="card-text pt-2">Track performance with real-time insights
-                            Access your call history, trends, and performance metrics via a clean, intuitive dashboard.
-                        </p>
-                        <img src="assets/image/app-white.webp" class="card-img-top" alt="...">
-                        <a href="#" class="btn btn-1 mt-3">Explore the Dashboard →</a>
-                    </div>
-                </div>
-            </div>
+    <div class="container tab mt-5 pt-3 mb-5">
+        <div class="tab_box">
+            <button class="tab_btn active">Accurate transcripts</button>
+            <button class="tab_btn"> Summaries</button>
+            <button class="tab_btn">Call Analytics</button>
         </div>
-    </div>
+        <div class="content_box">
+            <div class="content active">
+                <h2>Call Transcription Engine</h2>
+                <p>Turn sales calls into accurate transcripts
+                    Upload or record calls and get precise, speaker-separated text transcripts using our advanced
+                    speech-to-text AI.</p>
+                <img src="assets/image/app-white.webp" alt="voice" class="img-fluid mt-4">
+            </div>
+            <div class="content">
+                <h2>AI-Powered Call Summary</h2>
+                <p>Instant call insights at a glance
+                    Our AI analyzes your call transcripts and extracts key insights, action items, and summaries –
+                    perfect for quick reviews and follow-ups.</p>
+                <img src="assets/image/mobile-app-white.webp" alt="voice" class="img-fluid w-50 mt-4">
+            </div>
+            <div class="content">
+                <h2>Dashboard & Analytics</h2>
+                <p>Track performance with real-time insights
+                    Access your call history, trends, and performance metrics via a clean, intuitive dashboard.</p>
+                <img src="assets/image/web-tools-white.webp" alt="voice" class="img-fluid mt-4">
+
+            </div>
+
+
+
+        </div>
 
 
 
@@ -167,10 +156,10 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/style.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+            crossorigin="anonymous"></script>
+        <script src="assets/js/style.js"></script>
 
 
 </body>

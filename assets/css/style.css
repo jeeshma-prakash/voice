@@ -25,7 +25,7 @@
 .container-fluid.hero-section {
     height: 100vh;
     width: 100%;
-    background-image: url("/assets/image/home-bg.png") !important ;
+    background: linear-gradient(rgba(255, 255, 255, 0.132), rgba(255,255,255,.1)), url("/assets/image/bg-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -34,7 +34,7 @@
     font-size: 3.5rem;
     padding-bottom: 2rem;
     font-weight:bolder;
-    color: #000000;
+    color: #000000ef;
 }
 .container-fluid.hero-section p{
     font-size: 1.5rem;
@@ -45,30 +45,64 @@
     font-size: 1.1rem;
     text-align: center;
     line-height: 2.5rem;
-    color: #333131;
+    color: #3c4626;
 }
 .container.section-wrapper{
     padding-top: 5rem;
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
-.card{
+.container.tab{
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 18px rgba(26, 179, 2, 0.319);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(171, 16, 237, 0.1);
-    border-color: blueviolet;
 }
-.card:hover{
-    box-shadow: 0 5px 10px rgba(171, 16, 237, 0.3);
-    transform: scale(1.02);
-    transition: all 0.3s ease-in-out;
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(229,229,229);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
 }
-.btn.btn-1{
-    color: blueviolet;
+ .tab_box .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #656363;
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
 }
-.btn.btn-1:hover{
-    background-color: rgba(131, 0, 254, 0.662);
-    box-shadow: 5px 5px 5px rgba(139, 0, 198, 0.452);
-    color: #ffffff;
+.tab_box .tab_btn.active{
+    color: #42d100;
+    border-bottom: 3px solid #1f8f00;
+}
+.content_box{
+    padding: 20px;
+}
+.content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.content_box .content.active{
+    display: block;
+}
+.content_box .content h2{
+    margin-bottom: 10px;
 }
 
 
