@@ -20,7 +20,7 @@ body {
     scroll-behavior: smooth;
 }
 
-
+/* navbar section */
 
 .navbar-nav {
     margin-left: auto;
@@ -38,6 +38,8 @@ body {
 .navbar-nav a {
     color: var(--secondary-color);
 }
+
+/* hero-section */
 
 .container-fluid.hero-section {
     height: 100vh;
@@ -87,6 +89,8 @@ body {
     cursor: pointer;
 }
 
+/* youtube video-1 section */
+
 .container.section-wrapper h2 {
     color: var(--secondary-color);
 }
@@ -100,6 +104,8 @@ body {
 .container.tab-wrapper {
     margin-top: 8rem;
 }
+
+/* tab-pill section */
 
 .nav-pills .nav-link {
     border: 2px solid #e0e0e0;
@@ -175,6 +181,8 @@ body {
     font-weight: 500;
     color: #3a3737;
 }
+
+/* carousel section */
 
 .carousel-wrapper {
     overflow: hidden;
@@ -253,6 +261,8 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* ai call summary section */
+
 .ai-call-subtitle {
     text-align: justify;
     padding: 2rem;
@@ -277,6 +287,7 @@ body {
 
 }
 
+/* trusted creater section */
 
 .creator-section {
     text-align: center;
@@ -367,6 +378,11 @@ body {
 }
 
 
+
+
+
+/* media query */
+
 @media (max-width: 768px) {
     .carousel-card {
         min-width: 200px;
@@ -388,9 +404,6 @@ body {
         margin-bottom: 10px;
     }
 }
-
-
-
 
 @media (max-width: 950px) {
     .container-fluid.hero-section h1 {
