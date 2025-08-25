@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&family=Nunito:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <style>
+        body {
+               font-family: 'Montserrat', sans-serif;
+            background: #f8f8f8;
+            background-image: url(assets/image/sl_032421_41660_03.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            background: #ffffff18;
+            max-width: 1200px;
+            width: 95%;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Left form */
+        .contact-form {
+            padding: 40px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #006d6d;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 2px solid teal;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 128, 128, 0.6);
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .contact-form button {
+            background: teal;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #004d4d;
+        }
+
+        /* Right info boxes */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: rgba(255, 255, 255, 0.849);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            min-height: 100px;
+            backdrop-filter: blur(4px);
+            z-index: 1;
+             border: 1px solid transparent;
+   border-image: linear-gradient(to left, teal 1%, transparent 35%) 1 round;
+        }
+        .info-box h3 {
+            margin: 0 0 6px;
+            font-size: 17px;
+            font-weight: 600;
+            color: rgb(38, 105, 105);
+        }
+
+        .info-box p {
+            margin: 2px 0;
+            line-height: 1.4;
+            color: #137e7e;
+        }
+
+        .info-box:hover {
+            background: rgba(62, 181, 181, 0.123);
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 40px;
+            color: rgba(0, 157, 162, 0.733);
+        }
+
+        /* From Uiverse.io by MijailVillegas */
+        .card {
+            /* max-width: fit-content; */
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            /* align-content: center; */
+            /* justify-content: space-around; */
+            gap: 1rem;
+            backdrop-filter: blur(15px);
+            background-color: transparent;
+            /* box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192), */
+            /* inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164); */
+            transition: 0.5s;
+            border: none;
+        }
+
+        .card:hover {
+            animation: ease-out 5s;
+            background: rgba(173, 173, 173, 0.05);
+        }
+
+        .card ul {
+            padding: 1rem;
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .card ul li {
+            cursor: pointer;
+        }
+
+        .svg {
+            transition: all 0.3s;
+            /* if you find some problems change w - h : 30px*/
+            padding: 1rem;
+            height: 60px;
+            width: 60px;
+            border-radius: 30%;
+            color: rgb(0, 157, 162);
+            fill: currentColor;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+                inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+        }
+
+        .text {
+            opacity: 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: .9rem;
+            padding: 5px;
+            transition: all 0.3s;
+            color: rgb(0, 157, 162);
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            z-index: 9999;
+            box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+                -10px 0 1px rgba(153, 153, 153, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.3),
+                inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+        }
+
+        /*isometric prooyection*/
+        .iso-pro {
+            transition: 0.5s;
+        }
+
+        .iso-pro:hover a>.svg {
+            transform: translate(15px, -15px);
+            border-radius: 40%;
+        }
+
+        .iso-pro:hover .text {
+            opacity: 1;
+            transform: translate(25px, -2px) skew(-5deg);
+        }
+
+        .iso-pro:hover .svg {
+            transform: translate(5px, -5px);
+        }
+
+        .iso-pro span {
+            opacity: 0;
+            position: absolute;
+            color: #1877f2;
+            border-color: #1877f2;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+                inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+            border-radius: 50%;
+            transition: all 0.3s;
+            height: 60px;
+            width: 60px;
+        }
+
+        .iso-pro:hover span {
+            opacity: 1;
+        }
+
+        .iso-pro:hover span:nth-child(1) {
+            opacity: 0.2;
+        }
+
+        .iso-pro:hover span:nth-child(2) {
+            opacity: 0.4;
+            transform: translate(5px, -5px);
+        }
+
+        .iso-pro:hover span:nth-child(3) {
+            opacity: 0.6;
+            transform: translate(10px, -10px);
+        }
+        @media (max-width: 1074px) {
+             .card ul{
+                gap: .8rem;
+            }
+        }
+        @media (max-width: 920px) {
+             .svg {
+                height: 40px;
+                width: 50px;
+                padding: .5rem;
+            }
+        }
+
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .info-box {
+                flex: 1 1 45%;
+                min-width: 250px;
+            }
+        }
+
+        /* @media (max-width: 500px) {
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .social-icons {
+                justify-content: flex-start;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <!-- Left Side Form -->
+        <div class="contact-form">
+            <h2>Get In Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Right Side Info Boxes -->
+        <div class="contact-info">
+            <div class="info-box">
+                <div class="icon ms-2"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-content pt-2">
+                    <h3>Connect With Us</h3>
+                    <p>connect@brinit.in</p>
+                    <p>+91 7012 99 8181</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="icon ms-2"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-content">
+                    <h3>Our Location</h3>
+                    <p>Brinit Digital, 3rd Floor,<br>Citylink Travel Corporation,<br> Bakery Junction,
+                        Trivandrum<br>695014</p>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="icon ms-2"><i class="fa-solid fa-clock"></i></div>
+                <div class="info-content pt-2">
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+
+            <!-- Social icons -->
+            <!-- From Uiverse.io by MijailVillegas -->
+            <div class="card">
+                <ul>
+                    <li class="iso-pro">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <a href="https://www.facebook.com/people/Brinit-digital/61553330863885/" target="_blank">
+                            <svg viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                </path>
+                            </svg></a>
+                        <div class="text">Facebook</div>
+                    </li>
+                    <li class="iso-pro">
+  <span></span>
+  <span></span>
+  <span></span>
+  <a href="">
+    <svg
+      class="svg"
+      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+  </a>
+  <div class="text">WhatsApp</div>
+</li>
+
+
+                    <li class="iso-pro">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <a href="https://www.instagram.com/brinit.in/?igsh=MTlvcjUwd3B2bDlhOQ%3D%3D#" target="_blank">
+                            <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                </path>
+                            </svg>
+                        </a>
+                        <div class="text">Instagram</div>
+                    </li>
+                   <li class="iso-pro">
+  <span></span>
+  <span></span>
+  <span></span>
+  <a href="">
+    <svg
+      class="svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+    >
+      <path
+        d="M100.28 448H7.4V148.9h92.88V448zM53.79 108.1c-29.7 
+        0-53.8-24.6-53.8-54.3 0-29.7 24.1-53.8 53.8-53.8 
+        29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 
+        54.3zM447.9 448h-92.4V304.1c0-34.3-12.3-57.7-43-57.7 
+        -23.4 0-37.3 15.8-43.4 31.1-2.2 5.4-2.9 12.9-2.9 
+        20.4V448h-92.5V148.9h92.5v40.8c12.3-19 
+        34.3-46.1 83.5-46.1 60.9 0 106.7 39.7 
+        106.7 125.2V448z"
+      />
+    </svg>
+  </a>
+  <div class="text">LinkedIn</div>
+</li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
